@@ -26,6 +26,20 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
   };
   useEffect(() => {}, [loading]);
 
+  // If the app is opened directly on a project route (e.g. /projects/oceanedge),
+  // skip the initial site loading screen so the project page can render immediately.
+  useEffect(() => {
+    try {
+      const path = typeof window !== "undefined" ? window.location.pathname : "/";
+      if (path.startsWith("/projects/")) {
+        setIsLoading(false);
+        setLoading(100);
+      }
+    } catch (e) {
+      // ignore
+    }
+  }, []);
+
   return (
     <LoadingContext.Provider value={value as LoadingType}>
       {isLoading && <Loading percent={loading} />}

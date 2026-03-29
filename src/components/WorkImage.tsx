@@ -11,6 +11,8 @@ interface Props {
 const WorkImage = (props: Props) => {
   const [isVideo, setIsVideo] = useState(false);
   const [video, setVideo] = useState("");
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgError, setImgError] = useState(false);
   const handleMouseEnter = async () => {
     if (props.video) {
       setIsVideo(true);
@@ -21,6 +23,12 @@ const WorkImage = (props: Props) => {
     }
   };
 
+  const linkTarget = props.link
+    ? props.link.startsWith("http")
+      ? "_blank"
+      : "_self"
+    : "_blank";
+
   return (
     <div className="work-image">
       <a
@@ -28,7 +36,8 @@ const WorkImage = (props: Props) => {
         href={props.link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setIsVideo(false)}
-        target="_blank"
+        target={linkTarget}
+        rel={linkTarget === "_blank" ? "noopener noreferrer" : undefined}
         data-cursor={"disable"}
       >
         {props.link && (
@@ -36,7 +45,23 @@ const WorkImage = (props: Props) => {
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
+        <img
+          src={props.image}
+          alt={props.alt}
+          onLoad={() => setImgLoaded(true)}
+          onError={(e) => {
+            setImgError(true);
+            const target = e.currentTarget as HTMLImageElement;
+            // fallback to placeholder if available
+            try {
+              target.src = "/images/placeholder.webp";
+            } catch (err) {
+              // ignore
+            }
+          }}
+          style={{ opacity: imgLoaded ? 1 : 0.001, transition: "opacity 240ms ease" }}
+        />
+        {!imgLoaded && !imgError && <div className="image-skeleton" />}
         {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
       </a>
     </div>

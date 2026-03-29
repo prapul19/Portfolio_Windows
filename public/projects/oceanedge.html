@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ocean Edge — Project</title>
+    <style>
+      body { font-family: Inter, system-ui, -apple-system, Roboto, "Helvetica Neue", Arial; margin:0; color:#111; background:#fff; }
+      .container{ max-width:980px; margin:48px auto; padding:24px; }
+      header{ display:flex; align-items:center; gap:16px; }
+      .logo{ height:44px; }
+      <!doctype html>
+      <html lang="en">
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
+          <title>Ocean Edge — Project</title>
+          <link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;400;600;800&display=swap" rel="stylesheet">
+          <style>
+            :root{
+              --bg:#061016;
+              --panel:#071623;
+              --muted:#9aa7b0;
+              --accent:#6ad3ff;
+              --accent-2:#8dd3c7;
+              --glass: rgba(255,255,255,0.04);
+            }
+            html,body{height:100%;margin:0;font-family:Geist, system-ui, -apple-system, 'Helvetica Neue', Arial;color:#e6f7fb;background:var(--bg);}
+            .wrap{max-width:1200px;margin:32px auto;padding:28px;}
+            header{display:flex;align-items:center;gap:18px;margin-bottom:20px}
+            .logo{height:44px;filter:brightness(1.2)}
+            .meta{color:var(--muted);font-size:13px}
+            .title{font-weight:800;font-size:40px;color:#fff;margin:6px 0}
+            .subtitle{color:var(--accent);font-weight:600;margin-bottom:18px}
+
+            /* Hero */
+            .hero{
+              position:relative;overflow:hidden;border-radius:14px;padding:48px;background:linear-gradient(180deg, rgba(106,211,255,0.06), rgba(141,211,199,0.02));box-shadow:0 8px 40px rgba(2,8,11,0.6);
+              backdrop-filter: blur(6px);
+            }
+            .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+            .hero-left{transform:translateZ(0)}
+            .kicker{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#00222a;font-weight:700;margin-bottom:12px}
+            .lead{color:#dff8ff;font-size:18px;line-height:1.5;margin-bottom:16px}
+            .cta{display:inline-flex;gap:12px;align-items:center}
+            .btn{padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7fe0ff);color:#00222a;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(106,211,255,0.08);}
+
+            /* right panel mock */
+            .panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);}
+            .panel h4{margin:0 0 8px;color:#cfeff8}
+            .panel p{color:var(--muted);margin:0;font-size:14px}
+
+            /* sections */
+            section{margin-top:36px;padding:26px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02)}
+            h3{color:#e8fbff;margin:0 0 12px;font-size:20px}
+            p{color:var(--muted);line-height:1.6}
+            ul{color:var(--muted);line-height:1.6}
+
+            /* small ornaments */
+            .accent-line{height:3px;width:120px;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--accent-2));margin:18px 0}
+
+            /* reveal animation */
+            .reveal{opacity:0;transform:translateY(18px);transition:all 700ms cubic-bezier(.2,.9,.3,1)}
+            .reveal.in{opacity:1;transform:none}
+
+            /* subtle floating dots */
+            .dots{position:absolute;right:-60px;top:-60px;opacity:0.08;filter:blur(6px)}
+
+            footer{margin-top:28px;color:var(--muted);font-size:14px}
+
+            /* responsive */
+            @media (max-width:1000px){.hero-grid{grid-template-columns:1fr}.wrap{padding:18px}.panel{order:2}}
+            @media (max-width:600px){.title{font-size:28px}.kicker{font-size:12px}}
+          </style>
+        </head>
+        <body>
+          <div class="wrap">
+            <header>
+              <img src="/images/logo.png" alt="logo" class="logo" />
+              <div>
+                <div class="meta">Project • Experience Design</div>
+                <div class="title">Ocean Edge</div>
+                <div class="subtitle">Designing a Calm &amp; Immersive Coastal Stay Booking Experience</div>
+              </div>
+            </header>
+
+            <main class="hero" id="hero">
+              <svg class="dots" width="300" height="300" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="g1"><stop offset="0" stop-color="#6ad3ff"/><stop offset="1" stop-color="#8dd3c7" stop-opacity="0"/></radialGradient>
+                </defs>
+                <circle cx="30" cy="20" r="28" fill="url(#g1)" />
+              </svg>
+
+              <div class="hero-grid">
+                <div class="hero-left">
+                  <div class="kicker">Concept • Hospitality</div>
+                  <div class="lead reveal" data-reveal>
+                    Ocean Edge is a conceptual web experience designed for a premium coastal stay destination. The project explores how digital interfaces can evoke emotional connection, spatial awareness, and anticipation before a physical travel experience.
+                  </div>
+
+                  <div class="accent-line reveal" data-reveal></div>
+
+                  <div class="reveal" data-reveal>
+                    <p style="margin-top:12px">Role: <strong>UX / UI Designer</strong> &nbsp; • &nbsp; Platform: <strong>Responsive Website</strong></p>
+                    <div style="margin-top:14px" class="cta">
+                      <a class="btn" href="https://www.figma.com/proto/GLDmXElTbeYIi2A9WmMsLL/Ocean-Ege-Screens?node-id=1601-8011&t=Pt2SvGLWlR9zscb4-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=400%3A713&show-proto-sidebar=1" target="_blank" rel="noopener noreferrer">Open Prototype</a>
+                    </div>
+                  </div>
+                </div>
+
+                <aside class="panel reveal" data-reveal>
+                  <h4>Quick snapshot</h4>
+                  <p>Role: UX / UI Designer<br>Platform: Responsive Website<br>Scope: Visual storytelling · booking flow · spatial information hierarchy</p>
+                </aside>
+              </div>
+            </main>
+
+            <section class="reveal" data-reveal>
+              <h3>Context</h3>
+              <p>Travel booking platforms often prioritise dense information and promotional content, which can dilute the emotional value associated with destination-based experiences. Ocean Edge explores how a digital interface can function as a pre-arrival emotional touchpoint that builds desire and confidence.</p>
+            </section>
+
+            <section class="reveal" data-reveal>
+              <h3>Problem</h3>
+              <ul>
+                <li>Overwhelming booking pages filled with excessive offers and distractions</li>
+                <li>Difficulty visualising the spatial quality and atmosphere of the destination</li>
+                <li>Lack of emotional storytelling that reflects the uniqueness of the property</li>
+                <li>Fragmented booking journeys requiring multiple decision screens</li>
+              </ul>
+            </section>
+
+            <section class="reveal" data-reveal>
+              <h3>Design direction</h3>
+              <p><strong>Atmospheric Visual Language:</strong> Soft gradients, ocean-inspired color palettes, and spacious layouts were used to create a sense of openness and tranquillity.</p>
+              <p><strong>Narrative Scroll Experience:</strong> The website is structured as a continuous storytelling journey — from destination introduction to booking action.</p>
+            </section>
+
+            <section class="reveal" data-reveal>
+              <h3>Outcome & learnings</h3>
+              <p>The conceptual solution demonstrates how hospitality platforms can move beyond transactional booking interfaces toward experience-led digital journeys. Emotional pacing, minimal design, and spatial storytelling increased perceived luxury and decision confidence.</p>
+            </section>
+
+            <footer>
+              <div><a href="/" style="color:var(--muted);text-decoration:none">← Back to portfolio</a></div>
+            </footer>
+          </div>
+
+          <script>
+            // simple reveal on scroll using IntersectionObserver
+            (function(){
+              const io = new IntersectionObserver((entries)=>{
+                entries.forEach(e=>{
+                  if(e.isIntersecting) e.target.classList.add('in')
+                })
+              },{threshold:0.12})
+              document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el))
+            })();
+
+            // small parallax on mouse move for hero
+            (function(){
+              const hero = document.getElementById('hero');
+              if(!hero) return;
+              hero.addEventListener('mousemove', (e)=>{
+                const rect = hero.getBoundingClientRect();
+                const dx = (e.clientX - rect.left) / rect.width - 0.5;
+                const dy = (e.clientY - rect.top) / rect.height - 0.5;
+                hero.style.transform = `translate3d(${dx*6}px,${dy*6}px,0)`;
+              });
+              hero.addEventListener('mouseleave', ()=>{ hero.style.transform='none' });
+            })();
+          </script>
+        </body>
+      </html>

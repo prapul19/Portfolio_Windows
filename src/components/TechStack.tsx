@@ -13,14 +13,22 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/images/Figmaa.png",
+  "/images/Figmaa2.png",
+  "/images/interaction_design_same_both.png",
+  "/images/interactiondesign.png",
+  "/images/prototyping2.png",
+  "/images/Usability Testing2.png",
+  "/images/usabilitytesting.png",
+  "/images/designsystems2.png",
+  "/images/userresearch.png",
+  "/images/userresearch2.png",
+  "/images/wireframing_double_same.png",
+  "/images/wireframing.png",
+  "/images/xd both sides.png",
+  "/images/adobe xd.png",
+  "/images/designsystems.png",
+  
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 

@@ -1,0 +1,119 @@
+.oe-wrap{
+  max-width:1200px;margin:32px auto;padding:28px;color:#e6f7fb;font-family:Geist, system-ui, -apple-system, 'Helvetica Neue', Arial;background:transparent;
+}
+.oe-header{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.oe-logo{height:64px;filter:brightness(1.2);margin-left:-6px}
+.oe-meta{color:#9aa7b0;font-size:13px}
+.oe-title{font-weight:800;font-size:48px;margin:6px 0;line-height:1.02;text-shadow:0 6px 20px rgba(6,20,30,0.45);background:linear-gradient(90deg,#dffcff,#9ee9ff);-webkit-background-clip:text;color:transparent}
+.oe-sub{color:#6ad3ff;font-weight:600;margin-bottom:18px}
+.oe-hero{position:relative;overflow:hidden;border-radius:14px;padding:48px;background:linear-gradient(180deg, rgba(106,211,255,0.06), rgba(141,211,199,0.02));box-shadow:0 8px 40px rgba(2,8,11,0.6);backdrop-filter: blur(6px)}
+.oe-hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+
+/* Single-column hero variant for pages that don't use the aside panel */
+.oe-hero--single .oe-hero-grid{grid-template-columns:1fr;gap:20px}
+.oe-kicker{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#6ad3ff,#8dd3c7);color:#00222a;font-weight:700;margin-bottom:12px}
+.oe-lead{color:#dff8ff;font-size:18px;line-height:1.5;margin-bottom:16px}
+.oe-cta{display:inline-flex;gap:12px;align-items:center}
+.oe-btn{padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,#6ad3ff,#7fe0ff);color:#00222a;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(106,211,255,0.08)}
+.oe-panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.oe-panel h4{margin:0 0 8px;color:#cfeff8}
+.oe-panel p{color:#9aa7b0;margin:0;font-size:14px}
+section{margin-top:36px;padding:26px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02)}
+p{color:#9aa7b0;line-height:1.6}
+h3{margin:0 0 12px;font-size:24px;font-weight:700;letter-spacing:0.2px;background:linear-gradient(90deg,#c9f6ff,#8ce6d8);-webkit-background-clip:text;color:transparent}
+p{color:#9aa7b0;line-height:1.6}
+p{color:#9aa7b0;line-height:1.6}
+ul{color:#9aa7b0;line-height:1.6}
+.oe-accent{height:3px;width:120px;border-radius:3px;background:linear-gradient(90deg,#6ad3ff,#8dd3c7);margin:18px 0}
+.reveal{opacity:0;transform:translateY(18px);transition:all 700ms cubic-bezier(.2,.9,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.oe-dots{position:absolute;right:-60px;top:-60px;opacity:0.08;filter:blur(6px)}
+.oe-foot{margin-top:28px;color:#9aa7b0;font-size:14px}
+.oe-back{color:#9aa7b0;text-decoration:none}
+@media (max-width:1000px){.oe-hero-grid{grid-template-columns:1fr}.oe-wrap{padding:18px}.oe-panel{order:2}}
+@media (max-width:600px){.oe-title{font-size:36px}.oe-kicker{font-size:12px}h3{font-size:20px}}
+
+/* Images used inside the case study */
+.oe-image-wrap{margin-top:18px;display:flex;justify-content:center}
+.oe-image{max-width:100%;height:auto;border-radius:10px;box-shadow:0 12px 30px rgba(2,8,11,0.6);} 
+.oe-image-wrap{max-width:980px;margin-left:auto;margin-right:auto}
+
+.oe-sticky-back{position:fixed;top:18px;left:18px;z-index:1200;background:rgba(0,0,0,0.62);color:#fff;padding:8px 12px;border-radius:8px;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(2,6,23,0.45);backdrop-filter:blur(6px)}
+.oe-sticky-back:hover{transform:translateY(-1px)}
+
+/* Next project button (bottom-right) */
+.oe-next{position:fixed;right:22px;bottom:22px;z-index:1200;background:linear-gradient(90deg,#6ad3ff,#7fe0ff);color:#00222a;padding:12px 16px;border-radius:999px;font-weight:800;text-decoration:none;box-shadow:0 12px 30px rgba(2,12,30,0.35);border:1px solid rgba(255,255,255,0.06);display:inline-flex;align-items:center;gap:10px}
+.oe-next:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(2,12,30,0.45)}
+.oe-next:active{transform:translateY(0)}
+
+@media (max-width:600px){.oe-next{right:14px;bottom:14px;padding:10px 12px;font-size:14px}}
+
+/* Thumbnail and tooltip inside next button */
+.oe-next-thumb{width:38px;height:38px;border-radius:8px;object-fit:cover;flex-shrink:0;box-shadow:0 6px 18px rgba(2,8,20,0.28)}
+.oe-next-meta{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.oe-next-prefix{font-size:11px;color:rgba(0,34,38,0.65);text-transform:uppercase;letter-spacing:0.8px}
+.oe-next-label{font-weight:800;color:#00222a}
+
+.oe-next-tooltip{position:absolute;right:0;bottom:72px;transform:translateY(8px);opacity:0;visibility:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);border-radius:12px;padding:10px;display:flex;gap:10px;align-items:center;min-width:220px;box-shadow:0 14px 40px rgba(6,18,30,0.45);border:1px solid rgba(255,255,255,0.03)}
+.oe-next:hover .oe-next-tooltip{opacity:1;visibility:visible;transform:translateY(0)}
+.oe-next-tooltip-img{width:84px;height:60px;border-radius:8px;object-fit:cover;flex-shrink:0}
+.oe-next-tooltip-text{color:#dffcff}
+.oe-next-tooltip-sub{color:#9aa7b0;font-size:13px;margin-top:6px}
+
+@media (max-width:600px){.oe-next-tooltip{display:none}}
+
+/* Image grid: center items and allow wrapping */
+.oe-image-grid{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;justify-content:center;align-items:flex-start}
+.oe-image-grid .oe-image{width:48%;max-width:520px}
+
+/* small modifier for images where a reduced size is desired */
+.oe-image--small{max-width:360px;width:100%;display:block}
+
+/* two-column fixed layout for small sets (e.g., core insight) */
+.oe-image-grid.oe-grid-2{gap:18px}
+.oe-image-grid.oe-grid-2 .oe-image{width:360px;max-width:100%}
+
+@media (max-width:900px){
+  .oe-image-grid .oe-image{width:100%}
+  .oe-image-grid.oe-grid-2 .oe-image{width:100%}
+}
+
+/* Previous project button (bottom-left) */
+.oe-prev{position:fixed;left:22px;bottom:22px;z-index:1200;background:linear-gradient(90deg,#8dd3c7,#6ad3ff);color:#00222a;padding:10px 14px;border-radius:999px;font-weight:800;text-decoration:none;box-shadow:0 12px 30px rgba(2,12,30,0.35);border:1px solid rgba(255,255,255,0.06);display:inline-flex;align-items:center;gap:10px}
+.oe-prev:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(2,12,30,0.45)}
+.oe-prev-arrow{font-weight:900;color:#00222a;font-size:18px}
+.oe-prev-label{font-weight:800;color:#00222a}
+
+@media (max-width:600px){.oe-prev{left:14px;bottom:14px;padding:8px 10px;font-size:13px}}
+
+/* Thumbnail and tooltip for previous button */
+.oe-prev-thumb{width:38px;height:38px;border-radius:8px;object-fit:cover;flex-shrink:0;box-shadow:0 6px 18px rgba(2,8,20,0.28)}
+.oe-prev-meta{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.oe-prev-prefix{font-size:11px;color:rgba(0,34,38,0.65);text-transform:uppercase;letter-spacing:0.8px}
+.oe-prev-label{font-weight:800;color:#00222a}
+.oe-prev-tooltip{position:absolute;left:0;bottom:72px;transform:translateY(8px);opacity:0;visibility:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);border-radius:12px;padding:10px;display:flex;gap:10px;align-items:center;min-width:220px;box-shadow:0 14px 40px rgba(6,18,30,0.45);border:1px solid rgba(255,255,255,0.03)}
+.oe-prev:hover .oe-prev-tooltip{opacity:1;visibility:visible;transform:translateY(0)}
+.oe-prev-tooltip-img{width:84px;height:60px;border-radius:8px;object-fit:cover;flex-shrink:0}
+.oe-prev-tooltip-text{color:#dffcff}
+.oe-prev-tooltip-sub{color:#9aa7b0;font-size:13px;margin-top:6px}
+
+@media (max-width:600px){.oe-prev-tooltip{display:none}}
+
+/* Ensure the small-image modifier wins over grid width rules */
+.oe-image.oe-image--small,
+.oe-image-grid .oe-image.oe-image--small,
+.oe-image-grid.oe-grid-2 .oe-image.oe-image--small{
+  width:360px; /* fixed visual size on larger screens */
+  max-width:360px;
+  height:auto;
+  display:block;
+}
+
+@media (max-width:900px){
+  .oe-image.oe-image--small,
+  .oe-image-grid .oe-image.oe-image--small,
+  .oe-image-grid.oe-grid-2 .oe-image.oe-image--small{
+    width:100%;
+    max-width:100%;
+  }
+}

@@ -179,9 +179,11 @@
   font-family: "Geist", sans-serif;
 }
 
-/* .landing-intro h1 span {
-   font-weight: 200; 
-} */
+.landing-intro h1 span {
+  display: block; /* keep the last part of the name on its own line */
+  white-space: nowrap; /* prevent breaking inside the name */
+  font-weight: 500; /* match the main name weight */
+}
 
 .landing-info {
   position: absolute;
