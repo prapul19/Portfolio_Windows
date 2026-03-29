@@ -13,31 +13,39 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 export default function setSplitText() {
   ScrollTrigger.config({ ignoreMobileResize: true });
   if (window.innerWidth < 900) return;
+
   const paras: NodeListOf<ParaElement> = document.querySelectorAll(".para");
   const titles: NodeListOf<ParaElement> = document.querySelectorAll(".title");
 
   const TriggerStart = window.innerWidth <= 1024 ? "top 60%" : "20% 60%";
   const ToggleAction = "play pause resume reverse";
 
+  // PARA ANIMATION
   paras.forEach((para: ParaElement) => {
     para.classList.add("visible");
+
     if (para.anim) {
       para.anim.progress(1).kill();
       para.split?.revert();
     }
 
-    para.split = new SplitText(para, {
+    const splitInstance = new SplitText(para, {
       type: "lines,words",
       linesClass: "split-line",
     });
 
+    para.split = splitInstance;
+
+    // ✅ FIX: safe check
+    const words = splitInstance.words ?? [];
+
     para.anim = gsap.fromTo(
-      para.split.words,
+      words,
       { autoAlpha: 0, y: 80 },
       {
         autoAlpha: 1,
         scrollTrigger: {
-          trigger: para.parentElement?.parentElement,
+          trigger: para.parentElement?.parentElement ?? para,
           toggleActions: ToggleAction,
           start: TriggerStart,
         },
@@ -48,22 +56,31 @@ export default function setSplitText() {
       }
     );
   });
+
+  // TITLE ANIMATION
   titles.forEach((title: ParaElement) => {
     if (title.anim) {
       title.anim.progress(1).kill();
       title.split?.revert();
     }
-    title.split = new SplitText(title, {
+
+    const splitInstance = new SplitText(title, {
       type: "chars,lines",
       linesClass: "split-line",
     });
+
+    title.split = splitInstance;
+
+    // ✅ FIX: safe check
+    const chars = splitInstance.chars ?? [];
+
     title.anim = gsap.fromTo(
-      title.split.chars,
+      chars,
       { autoAlpha: 0, y: 80, rotate: 10 },
       {
         autoAlpha: 1,
         scrollTrigger: {
-          trigger: title.parentElement?.parentElement,
+          trigger: title.parentElement?.parentElement ?? title,
           toggleActions: ToggleAction,
           start: TriggerStart,
         },
