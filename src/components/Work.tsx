@@ -5,13 +5,13 @@ const projects = [
   {
     id: "01",
     title: "ZigMa",
-    category: "Designing a Career Progress Ecosystem for Job Seekers and Recruiters",
+    category: "Job Portal",
     tools:
       "Platform: Mobile | Role: Product / UX Designer | Scope: End-to-end experience design | Focus: Career discovery · Job application · Networking · Profile systems",
     overview:
-      "An integrated mobile platform enabling users to learn skills, build professional identity, discover relevant opportunities, and connect with recruiters — all within a unified experience.",
+      "",
     image: "/images/zigmaa.avif",
-  link: "/projects/zigma",
+    link: "/projects/zigma",
     figma: "https://www.figma.com/proto/89uLsutxXe20WhbSp8wqSZ/Zigma?node-id=2-44&t=DBEX8Ez2YsEvF4UD-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A44",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
       "Role: UX / UI Designer | Platform: Responsive Website | Scope: Visual storytelling · booking flow · amenity discovery",
     image: "/images/oceanedge%20cover.png",
     overview:
-      "Ocean Edge is a premium destination platform focused on helping users discover and book high-quality amenities through visually-driven, decision-friendly interfaces.",
+      "",
     link: "/projects/oceanedge",
     figma: "https://www.figma.com/proto/GLDmXElTbeYIi2A9WmMsLL/Ocean-Ege-Screens?node-id=1601-8011&t=Pt2SvGLWlR9zscb4-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=400%3A713&show-proto-sidebar=1",
   },
@@ -33,8 +33,8 @@ const projects = [
     tools: "Figma | UX/UI Design | Prototyping | User Research",
     image: "/images/pawfeet.avif",
     overview:
-      "PawFeet is a thoughtfully designed mobile application that connects loving families with pets in need of a home. The platform simplifies the adoption journey by making it easy to discover, connect, and adopt dogs and other pets through a seamless digital experience.",
-  link: "/projects/pawfeet",
+      "PawFeet is a thoughtfully designed mobile application that connects loving families with pets in need of a home.",
+    link: "/projects/pawfeet",
   },
   {
     id: "04",
@@ -43,8 +43,8 @@ const projects = [
     tools: "Figma | UX/UI Design | Prototyping | User Research | Usability Testing",
     image: "/images/velora.png",
     overview:
-      "Vellora is a mobile application designed to simplify urban commuting by providing an easy and efficient bicycle booking experience. The platform enables users to locate nearby bicycles, unlock them seamlessly, and ride across the city with minimal effort. The goal was to create a user-friendly, accessible, and eco-conscious solution",
-  link: "/projects/vellora",
+      "Vellora is a mobile application designed to simplify urban commuting by providing an easy and efficient booking experience.",
+    link: "/projects/vellora",
   },
 ];
 
@@ -63,10 +63,10 @@ const Work = () => {
                   <h3>{project.id}</h3>
                   <div>
                     <h4>{project.title}</h4>
-                      <p>{project.category}</p>
-                      {project.overview && (
-                        <p className="work-overview">{project.overview}</p>
-                      )}
+                    <p>{project.category}</p>
+                    {project.overview && (
+                      <p className="work-overview">{project.overview}</p>
+                    )}
                   </div>
                 </div>
                 <h4>Tools and features</h4>

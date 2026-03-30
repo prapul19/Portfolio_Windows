@@ -92,7 +92,7 @@ const WhatIDo = () => {
               <p>
                 Conduct qualitative and quantitative research to uncover user
                 needs, pain points, and behaviours. Run usability tests,
-                interviews, and analyze data to inform product decisions.
+                interviews, and analyze data.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -132,7 +132,7 @@ const WhatIDo = () => {
               <p>
                 Translate research into wireframes, flows, and high-fidelity
                 prototypes. Validate concepts quickly and iterate to improve
-                usability and conversion.
+                usability.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
